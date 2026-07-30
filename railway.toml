@@ -3,7 +3,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "cd engagebot && pnpm start"
+startCommand = "node_modules/.bin/next start -p ${PORT:-3000}"
 
 [env]
 NODE_ENV = "production"
