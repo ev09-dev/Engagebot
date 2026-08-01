@@ -15,7 +15,7 @@ A smart engagement bot SaaS for content creators on Instagram and TikTok. The to
 
 ## Tech Stack
 
-- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Frontend**: Next.js 15.3.8, React 19, TypeScript, Tailwind CSS
 - **Backend**: Next.js API Routes
 - **Database**: Supabase (PostgreSQL)
 - **Authentication**: Supabase Auth
@@ -28,8 +28,8 @@ A smart engagement bot SaaS for content creators on Instagram and TikTok. The to
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
+- Node.js 20.20.2
+- pnpm 10.34.5
 - Railway account
 - Supabase account
 - Stripe account
@@ -46,7 +46,7 @@ cd engagebot
 
 2. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Set up environment variables:
@@ -64,12 +64,12 @@ SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 # Instagram OAuth Configuration
 INSTAGRAM_APP_ID=your-instagram-app-id
 INSTAGRAM_APP_SECRET=your-instagram-app-secret
-INSTAGRAM_REDIRECT_URI=http://localhost:3000/api/auth/instagram/callback
+INSTAGRAM_REDIRECT_URI=http://localhost:3000/api/auth/instagram
 
 # TikTok OAuth Configuration
 TIKTOK_CLIENT_KEY=your-tiktok-client-key
 TIKTOK_CLIENT_SECRET=your-tiktok-client-secret
-TIKTOK_REDIRECT_URI=http://localhost:3000/api/auth/tiktok/callback
+TIKTOK_REDIRECT_URI=http://localhost:3000/api/auth/tiktok
 
 # Stripe Configuration
 STRIPE_PUBLISHABLE_KEY=pk_test_your-stripe-publishable-key
@@ -95,7 +95,7 @@ supabase db push
 
 6. Run the development server:
 ```bash
-npm run dev
+pnpm dev
 ```
 
 7. Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -104,17 +104,17 @@ npm run dev
 
 ### Unit Tests
 ```bash
-npm test
+pnpm test
 ```
 
 ### E2E Tests
 ```bash
-npm run test:e2e
+pnpm test:e2e
 ```
 
 ### Test Coverage
 ```bash
-npm run test:coverage
+pnpm test:coverage
 ```
 
 ## Deployment
@@ -123,7 +123,7 @@ npm run test:coverage
 
 1. Install Railway CLI:
 ```bash
-npm install -g @railway/cli
+pnpm add -g @railway/cli
 ```
 
 2. Login to Railway:
